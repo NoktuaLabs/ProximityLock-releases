@@ -8,7 +8,9 @@
 # vX.Y.Z (étiquette sur main), y joint le DMG, puis supprime la branche :
 # le binaire ne reste pas dans l'historique du dépôt.
 #
-# Générique : le même fichier sert à tous les dépôts *-releases de NoktuaLabs.
+# Repris tel quel de ClipKeeper-releases, SAUF une adaptation locale (09/11) :
+# ProximityLock joint aussi, s'il est présent, l'APK du compagnon Android
+# (*.apk, au plus un), dans la même release que le DMG.
 name: Publier une version
 
 on:
@@ -35,7 +37,9 @@ jobs:
           DMG=( *.dmg )
           [[ ${#DMG[@]} -eq 1 ]] || { echo "Il faut exactement un DMG (trouvé : ${#DMG[@]})"; exit 1; }
           [[ -s NOTE.md ]] || { echo "NOTE.md manquante"; exit 1; }
-          gh release create "$VERSION" "${DMG[0]}" \
+          APK=( *.apk )
+          [[ ${#APK[@]} -le 1 ]] || { echo "Au plus un APK (trouvé : ${#APK[@]})"; exit 1; }
+          gh release create "$VERSION" "${DMG[0]}" ${APK[@]+"${APK[@]}"} \
             --title "$PRODUIT ${VERSION#v}" --notes-file NOTE.md --target main
 
       - name: Supprimer la branche de publication
