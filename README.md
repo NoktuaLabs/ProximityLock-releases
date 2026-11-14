@@ -19,7 +19,7 @@ pas de serveur : tout se passe sur votre Mac.
 
 <table>
 <tr>
-<td width="50%"><img src="images/atout-verrouillage.png" alt="Réglages du verrouillage"><br><b>Réglé à votre bureau</b><br>Trois zones — arrivée, limite de portée, verrouillage — que vous placez d'un glissement. Après une semaine, ProximityLock vous suggère les seuils qui collent à vos habitudes.</td>
+<td width="50%"><img src="images/atout-verrouillage.png" alt="Réglages du verrouillage"><br><b>Réglé à votre bureau</b><br>Trois zones — arrivée, limite de portée, hors de portée — que vous placez d'un glissement. Après une semaine, ProximityLock vous suggère les seuils qui collent à vos habitudes.</td>
 <td width="50%"><img src="images/atout-lieux.png" alt="Lieux de confiance"><br><b>Lieux de confiance</b><br>À la maison, la surveillance se met en pause toute seule : le lieu est reconnu à votre réseau Wi-Fi, à votre adresse, ou aux deux.</td>
 </tr>
 <tr>
@@ -27,6 +27,8 @@ pas de serveur : tout se passe sur votre Mac.
 <td width="50%"><img src="images/atout-android.png" alt="Jumelage d'un téléphone Android"><br><b>Aussi avec un téléphone Android</b><br>Le compagnon Android émet un code qui change toutes les 30 secondes : impossible de l'imiter en le copiant. Le jumelage se fait en scannant un QR code.</td>
 </tr>
 </table>
+
+Et aussi : le graphe du signal des deux dernières minutes (Réglages → Verrouillage, et dans le panneau si vous le souhaitez), et un thème clair, sombre ou celui du système.
 
 ## Installer
 
